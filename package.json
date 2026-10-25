@@ -1,7 +1,7 @@
 {
   "name": "supersplat-3dgs-downloader",
   "version": "1.0.0",
-  "description": "Autonomous downloader and converter for SuperSplat Gaussian Splatting scenes to PLY format.",
+  "description": "A utility to download and convert SuperSplat 3DGS scenes to PLY format, bypassing UI restrictions where direct download is disabled.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
