@@ -19,9 +19,11 @@ Make sure you have **Node.js** installed on your system.
 3. Run the script:
    ```bash
    npm start
-(Or simply double-click start.bat on Windows)
+   ```
+   *(Or simply double-click `start.bat` on Windows)*
 4. Paste the SuperSplat scene link or ID when prompted.
-5. The raw structured data will be saved locally in items_structured/, and the final .ply file will appear right in the project root directory.
+5. The raw structured data will be saved locally in `items_structured/`, and the final `.ply` file will appear right in the project root directory.
 
-License
+## License
+
 MIT
