@@ -1,6 +1,6 @@
 # SuperSplat 3DGS Downloader
 
-A lightweight, autonomous Node.js utility to download and convert SuperSplat Gaussian Splatting scenes (both standard and streamed architectures) directly into standard `.ply` files.
+A lightweight, autonomous Node.js utility to download and convert SuperSplat Gaussian Splatting scenes directly into standard `.ply` files, allowing you to export scenes even when the direct download option is disabled in the web interface.
 
 ## Features
 - **Smart URL Normalization**: Automatically handles `superspl.at/scene/...` and `superspl.at/s?id=...` formats.
