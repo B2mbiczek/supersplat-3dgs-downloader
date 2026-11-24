@@ -1,28 +1,29 @@
 # SuperSplat 3DGS Downloader
 
-A lightweight, autonomous Node.js utility to download and convert SuperSplat Gaussian Splatting scenes directly into standard `.ply` files, allowing you to export scenes even when the direct download option is disabled in the web interface.
+A lightweight, autonomous, cross-platform Node.js utility to download and convert SuperSplat 3D Gaussian Splatting scenes directly into standard `.ply` files—even when the direct download button is disabled in the web interface.
 
 ## Features
-- **Smart URL Normalization**: Automatically handles `superspl.at/scene/...` and `superspl.at/s?id=...` formats.
-- **Architecture Detection**: Supports both Standard SOG and Streamed SOG (LOD grid) models.
-- **Bypass UI Restrictions**: Allows programmatic access and conversion of scenes even when the direct download option is disabled in the web interface by the author.
-- **On-the-Fly Decompression**: Seamlessly manages GZIP-compressed manifests and chunks.
-- **Automated Conversion**: Uses `@playcanvas/splat-transform` under the hood to compile assets into a clean `.ply` output file.
+- **Smart URL & CDN Resolution**: Automatically normalizes `superspl.at/scene/...` and `superspl.at/s?id=...` links, raw scene IDs, or direct CloudFront URLs.
+- **Multi-Format Architecture Detection**: Supports **Streamed SOG** (`lod-meta.json`), **Standard SOG** (`meta.json`), and direct single-file models (`.sog`, `.compressed.ply`, `.ply`, `.splat`).
+- **Exact Manifest Parsing**: Fetches only the exact assets listed in scene manifests instead of brute-forcing chunk grids, resulting in fast, error-free downloads.
+- **Bypass UI Restrictions**: Allows programmatic access and conversion of public scenes even when direct download is disabled in the web interface.
+- **Automated Conversion & Cleanup**: Uses `@playcanvas/splat-transform` under the hood to compile assets into a clean `.ply` output file and automatically removes temporary files afterward.
 
 ## Prerequisites
-Make sure you have **Node.js** installed on your system.
+- **Node.js v18.0.0** or higher ([Download Node.js LTS](https://nodejs.org/))
 
 ## Usage
 
+### Windows
 1. Download or clone this repository into a local folder.
-2. Open a terminal or command prompt in the project directory.
-3. Run the script:
-   ```bash
-   npm start
-   ```
-   *(Or simply double-click `start.bat` on Windows)*
-4. Paste the SuperSplat scene link or ID when prompted.
-5. The raw structured data will be saved locally in `items_structured/`, and the final `.ply` file will appear right in the project root directory.
+2. Double-click **`start.bat`** *(dependencies install automatically on the first run)*.
+3. Paste the SuperSplat scene link or ID when prompted.
+4. The final `model_<id>_<version>.ply` file will be saved directly in the project root directory.
+
+### macOS / Linux
+```bash
+chmod +x start.sh
+./start.sh
 
 ## License
 
