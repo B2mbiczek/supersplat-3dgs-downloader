@@ -1,18 +1,25 @@
 {
   "name": "supersplat-3dgs-downloader",
-  "version": "1.0.0",
-  "description": "A utility to download and convert SuperSplat 3DGS scenes to PLY format, bypassing UI restrictions where direct download is disabled.",
+  "version": "3.0.0",
+  "description": "Downloader and converter for SuperSplat 3D Gaussian Splatting scenes to PLY format.",
   "main": "index.js",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "start": "node index.js"
+  },
+  "dependencies": {
+    "@playcanvas/splat-transform": "latest"
   },
   "keywords": [
     "supersplat",
     "gaussian-splatting",
     "3dgs",
     "ply",
-    "playcanvas"
+    "playcanvas",
+    "sog"
   ],
-  "author": "",
   "license": "MIT"
 }
