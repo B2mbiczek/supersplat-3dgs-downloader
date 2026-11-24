@@ -20,6 +20,6 @@ if not exist "node_modules\" (
     )
 )
 
-node index_v3.js %*
+node index.js %*
 echo.
 pause
